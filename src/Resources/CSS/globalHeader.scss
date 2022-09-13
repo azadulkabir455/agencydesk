@@ -1,0 +1,81 @@
+@import "./global.scss";
+
+.myNav {
+    background-color: $lightShadow;
+    height: 100px;
+}
+.myNav .navbar-brand img{
+    width: 160px;
+    height: auto;
+}
+.myNav .nav-link {
+    color: $white;
+    @include menuFont;
+    padding: 0 !important;
+}
+.myNav .nav-item:not(:last-child) {
+    margin-right: 35px !important;
+}
+.myNav .nav-link.active, 
+.myNav .nav-link:hover  {
+    color: $cutePink;
+}
+
+// For Navlink Bottom Border
+.myNav .nav-item {
+    position: relative;
+}
+.myNav .nav-link::before {
+    content:"";
+    width: 0%;
+    height: 2px;
+    background-color: $cutePink;
+    transition: all .2s linear;
+    position: absolute;
+    bottom:-5px;
+    left:0;
+}
+.myNav .nav-link.active::before,
+.myNav .nav-link:hover::before {
+    width: 50%;
+}
+
+// For Tab and Mobile
+
+@media only screen and (max-width: 990px) {
+    .myNav {
+        height: auto;
+    }
+    .myNav .navbar-brand img{
+        width: 140px;
+    }
+    .myNav .navbar-toggler {
+        padding: 2px 5px !important;
+        border-radius: 0 !important;
+        background-color: $darkGray;
+    }
+    .myNav .navbar-toggler:focus {
+        box-shadow: none;
+    }
+    .myNav .navbar-toggler .navbar-toggler-icon {
+        filter: invert(1);
+    }
+    .myNav .navbar-nav {
+        padding: 40px 0 32px;
+    }
+    .myNav .nav-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .myNav .nav-link::before {
+        display: none;
+    }
+
+}
+@media only screen and (max-width: 575px) {
+    .myNav .navbar-nav {
+        padding: 20px 0 12px;
+    }
+    .myNav .nav-item:not(:last-child) {
+        margin-bottom: 15px;
+    } 
+} 

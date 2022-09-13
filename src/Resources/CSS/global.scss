@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
+
+$poppins: 'Poppins', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+$white:#fff;
+$lightWhite:#c6c9d8bf;
+$darkShadow: #00010c;
+$lightShadow: #191919;
+$darkGray: #1F1F25;
+$lightGray: #1d1d24bf;
+$hotRed:#ff1100;
+$cutePink:#f9004d;
+$fireYellow: #FFC20F;
+
+* {
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+::selection {
+    background-color: $cutePink;
+    color:$white;
+}
+body {
+    font-family: $poppins;
+}
+body::-webkit-scrollbar {
+    width: 10px;
+}
+   
+body::-webkit-scrollbar-track {
+background-color: $darkShadow;
+}
+
+body::-webkit-scrollbar-thumb {
+background-color: $hotRed;
+}
+h1, h2, h3, h4,p {
+    margin: 0;
+}
+@mixin h1 {
+    font-family: $montserrat;
+    font-size: 76px;
+    font-weight: 84px;
+    font-weight: 900;
+    text-transform: uppercase;
+    @content;
+    @media only screen and (max-width: 1024px) {
+        font-size: 56px;
+        line-height: 60px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 40px;
+        line-height: 52px;
+    }
+}
+
+@mixin h2 {
+    font-family: $montserrat;
+    font-size: 56px;
+    font-weight: 66px;
+    font-weight: 900;
+    text-transform: capitalize;
+    @content;
+    @media only screen and (max-width: 1024px) {
+        font-size: 42px;
+        line-height: 48px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 36px;
+        line-height: 42px;
+    }
+}
+@mixin h3 {
+    font-family: $montserrat;
+    font-size: 42px;
+    font-weight: 48px;
+    font-weight: 900;
+    text-transform: capitalize;
+    @content;
+    @media only screen and (max-width: 1024px) {
+        font-size: 36px;
+        line-height: 42px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+@mixin h4 {
+    font-family: $montserrat;
+    font-size: 32px;
+    font-weight: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    @content;
+    @media only screen and (max-width: 1024px) {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+@mixin subtitle {
+    font-family: $montserrat;
+    font-size: 24px;
+    font-weight: 30px;
+    font-weight: 800;
+    text-transform: capitalize;
+    letter-spacing: .75px;
+    @content;
+    @media only screen and (max-width: 1024px) {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+@mixin buttonText {
+    font-family: $poppins;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    @content;
+    @media only screen and (max-width: 1024px) {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: .25px;
+    }
+}
+
+@mixin menuFont {
+    font-family: $poppins;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    @content;
+    @media only screen and (max-width: 1024px) {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: .25px;
+    }
+}
+
+
+@mixin paragraphFont {
+    font-family: $poppins;
+    font-size: 20px;
+    font-weight: 30px;
+    font-weight: 500;
+    text-transform: capitalize;
+    @content;
+    @media only screen and (max-width: 1024px) {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
