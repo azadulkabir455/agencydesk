@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink,Link } from 'react-router-dom';
 import { RiFacebookFill, RiInstagramLine, RiTwitterLine, RiYoutubeLine } from "react-icons/ri";
 import "../../Resources/CSS/globalFooter.scss";
 
@@ -38,7 +38,7 @@ export default function GlobalFooter() {
         <>
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-6 leftSide">
+                    <div className="col-xl-6 col-12  leftSide">
                         <div className="footerLeftContent">
                             <p>Ready to do this</p>
                             <h2>Let's get to work</h2>
@@ -61,33 +61,47 @@ export default function GlobalFooter() {
                             </form>
                         </div>
                     </div>
-                    <div className="col-6">
-                        <div className="container">
+                    <div className="col-xl-6 col-12 rightSide">
                             <div className="row">
-                                <div className="col-5">
+                                <div className="col-sm-5 col-12">
                                     <h4>Quick Link</h4>
-                                    <ul>
-                                        <li><NavLink to="/about">About</NavLink></li>
-                                        <li><NavLink to="/blog">Blog</NavLink></li>
-                                        <li><NavLink to="/contact">Let's talk</NavLink></li>
+                                    <ul className='nav flex-column'>
+                                        <li className='nav-item'>
+                                            <NavLink to="/contact" className="nav-link">Let's talk</NavLink>
+                                        </li>
+                                        <li className='nav-item'>
+                                            <NavLink to="/about" className="nav-link">About</NavLink>
+                                        </li>
+                                        <li className='nav-item'>
+                                            <NavLink to="/blog" className="nav-link">Blog</NavLink>
+                                        </li>
                                     </ul>
                                 </div>
-                                <div className='col-7'>
+                                <div className='col-sm-7 col-12'>
                                     <h4>Say Hello</h4>
-                                    <a>admin@example.com</a>
-                                    <a>hr@example.com</a>
+                                    <div className="footerEmails">
+                                        <Link to="mailto:admin@example.com">admin@example.com</Link>
+                                        <Link to="mailto:hr@example.com">hr@example.com</Link>
+                                    </div>
                                     <div className="footerSocialLink">
                                         <ul>
-                                            <li><RiFacebookFill /></li>
-                                            <li><RiInstagramLine /></li>
-                                            <li><RiTwitterLine /></li>
-                                            <li><RiYoutubeLine /></li>
+                                            <li>
+                                                <Link to="/"><RiFacebookFill /></Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/"><RiInstagramLine /></Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/"><RiTwitterLine /></Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/"><RiYoutubeLine /></Link>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <p>Copyright © 2021 Rainbow-Themes. All Rights Reserved</p>
+                        <p className='copyright'>Copyright © 2022 Azad ul Kabir. All Rights Reserved</p>
                     </div>
                 </div>
             </div>

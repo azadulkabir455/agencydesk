@@ -1,0 +1,57 @@
+@import "./global.scss";
+
+.homeBanner {
+    padding: 100px 0 160px;
+    background-color: $lightShadow;
+    h1 {
+        @include h1 {
+            font-size: 140px;
+            background: -webkit-linear-gradient(-45deg,$hotRed, $cutePink);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @media only screen and (max-width: 1024px) {
+           font-size: 100px;
+           line-height: 100px;        
+        }
+        @media only screen and (max-width: 767px) {
+            font-size: 70px;
+            line-height: 65px;        
+         }
+    }
+    .featureItems {
+        margin-top: 60px;
+        .features {
+            img {
+                height: 63px;
+                width: auto;
+            }
+            h4 {
+                @include subtitle;
+                color: $white;
+                margin: 40px 0 30px;
+            }
+            p {
+                @include paragraphFont;
+                color: $lightWhite;
+            }
+        }
+    }
+    @media only screen and (max-width: 992px) {
+        .featureItems {
+            margin-top: 0;
+            .features {
+                img {
+                    height: 51px;
+                    margin-top: 40px;
+                }
+                h4 {
+                    margin: 20px 0 15px;
+                }
+                p {
+                    max-width: 500px;
+                }
+            }
+        }
+    }
+}

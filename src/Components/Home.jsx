@@ -1,9 +1,10 @@
 import React from 'react'
+import LandingPageBanner from '../GlobalsWidgets/Banners/LandingPageBanner'
 
 export default function Home() {
   return (
     <>
-        <h1>This is home page</h1>
+      <LandingPageBanner />
     </>
   )
 }
