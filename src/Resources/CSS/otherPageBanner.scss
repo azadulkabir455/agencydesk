@@ -1,0 +1,38 @@
+@import "./global.scss";
+
+.otherpagebn {
+    min-height: 450px;
+    background-image: url("../Images/otherbannerbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    .headerContent {
+        color: $white;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        h1 {
+            @include h1;
+        }
+        p {
+            @include paragraphFont;
+            padding-top: 12px;
+            @media only screen and (max-width: 1024px) {
+                padding-top: 8px; 
+            }
+        }
+    }
+    .headerOverlay {
+        background-color: $darkShadow;
+        width: 100%;
+        height: 100%;
+        opacity: .6;
+        position: absolute;
+        left:0;
+        top:0;
+        z-index: 1;
+    }
+}

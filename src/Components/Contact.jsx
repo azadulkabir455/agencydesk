@@ -1,9 +1,11 @@
 import React from 'react'
+import LandingPageBanner from '../GlobalsWidgets/Banners/LandingPageBanner'
+import OtherPageBanner from '../GlobalsWidgets/Banners/OtherPageBanner'
 
 export default function Contact() {
   return (
     <>
-        <h1>This is contact page</h1>
+        <OtherPageBanner  name="Contact us"/>
     </>
   )
 }

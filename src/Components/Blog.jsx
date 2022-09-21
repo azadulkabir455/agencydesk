@@ -1,9 +1,10 @@
 import React from 'react'
+import OtherPageBanner from '../GlobalsWidgets/Banners/OtherPageBanner'
 
 export default function Blog() {
   return (
     <>
-        <h1>This is Blog page</h1>
+        <OtherPageBanner name="Blog" />
     </>
   )
 }
