@@ -3,6 +3,7 @@ const agencyDeskImages = {
     developmentIcon: require("./developmentIcon.png"),
     marketingIcon: require("./marketingIcon.png"),
     strategyIcon: require("./strategyIcon.png"),
+    aboutUs: require("./aboutus.jpg")
 }
 
 export {agencyDeskImages}

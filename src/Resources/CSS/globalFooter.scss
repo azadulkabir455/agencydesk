@@ -1,6 +1,6 @@
 @import './global.scss';
 
-.leftSide {
+.footer {
     background-image:linear-gradient(145deg,#f81f01,#ee076e);
     padding: 120px;
     position: relative;
@@ -154,13 +154,13 @@
 }
 
 @media only screen and (max-width: 1350px) {
-    .leftSide,
+    .footer,
     .rightSide {
         padding: 80px 60px;
     }
 }
 @media only screen and (max-width: 1200px) {
-    .leftSide,
+    .footer,
     .rightSide {
         padding: 80px 60px;
     }
@@ -169,21 +169,21 @@
     }
 }
 @media only screen and (max-width: 1200px) {
-    .leftSide,
+    .footer,
     .rightSide {
         padding: 40px 20px;
     }
-    .leftSide input[type="email"] {
+    .footer input[type="email"] {
         margin-top: 25px;
     }
-    .leftSide::after {
+    .footer::after {
         width: 195px;
         height: 201px;
         top: 80px;
         background-size: contain;
         background-repeat: no-repeat;
     }
-    .leftSide input[type="submit"] {
+    .footer input[type="submit"] {
         padding: 10px 22px;
     }
 }

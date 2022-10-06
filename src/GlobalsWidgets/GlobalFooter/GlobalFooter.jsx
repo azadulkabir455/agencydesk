@@ -38,7 +38,7 @@ export default function GlobalFooter() {
         <>
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-xl-6 col-12  leftSide">
+                    <div className="col-xl-6 col-12  footer">
                         <div className="footerLeftContent">
                             <p>Ready to do this</p>
                             <h2>Let's get to work</h2>
