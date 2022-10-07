@@ -101,3 +101,202 @@
     }
 
 }
+.funFact {
+    background-color: $lightShadow;
+    padding: 120px 0;
+    h4 {
+        @include h4 {
+            color: $white;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+    }
+    .counter {
+        text-align: center;
+        .number {
+            @include h2 {
+                color: $hotRed;
+                padding-bottom: 12px;
+            }
+        }
+    }
+    p {
+        @include paragraphFont {
+            color: $lightWhite;
+            padding: 0 20px;
+        }
+    }
+    @media only screen and (max-width: 991px) {
+        padding: 80px 0;
+        h4 {
+            padding-bottom: 10px;
+        }
+        .counter {
+            padding-top: 30px;
+            .number {
+                padding-bottom: 8px;
+            }
+            p {
+                padding: 0 5px;
+            }
+        }
+    }
+}
+.latestNews {
+    background-color: $darkShadow;
+    padding: 120px 0 220px;
+    margin-bottom: -100px;
+    h2 {
+        @include h2 {
+            color: $white;
+            padding-bottom: 10px;
+        }
+    }
+    p {
+        @include paragraphFont {
+            @include paragraphFont {
+                color: $lightWhite;
+            }
+        }
+    }
+    .topbutton {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        button {
+            @include buttonText {
+                color: $hotRed;
+                background-color: transparent;
+                border: none;
+                outline: none;
+            }
+            position: relative;
+            &:after {
+                content:"";
+                width: 10%;
+                height: 2px;
+                background-color: $hotRed;
+                position: absolute;
+                left:0;
+                bottom: -10px;
+                @extend %transition
+            }
+            &:hover:after {
+                width: 100%;
+            }
+        }
+    }
+    .allNews {
+        padding-top: 60px;
+        .news {
+            .newsCotainer {
+                position:relative;
+                overflow: hidden;
+                border-radius: 8px;
+                @extend %transition;
+                &:after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left:0;
+                    bottom:0;
+                    z-index: 0;
+                    background:linear-gradient(180deg,#fc004c00 0,#000);
+                    border-radius: 8px;
+                }
+                &:before {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left:0;
+                    bottom:0;
+                    z-index: 1;
+                    background:linear-gradient(180deg,#fc004c81 0,#000);
+                    border-radius: 8px;
+                    transform: translateY(100px);
+                    opacity: 0;
+                    @extend %transition;
+                }
+                &:hover::before {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+                &:hover .newsContent{
+                    bottom: 0;
+                }
+                &:hover img {
+                    transform: scale(1.1);
+                }
+                img {
+                    width: 100%;
+                    height: 532px;
+                    border-radius: 8px;
+                    object-fit: cover;
+                    position: relative;
+                    @extend %transition;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+
+                }
+                .newsContent {
+                    position: absolute;
+                    z-index: 3;
+                    left: 0;
+                    bottom:-80px;
+                    padding: 30px;
+                    @extend %transition;
+
+                    span {
+                        display:block;
+                        @include preHeader {
+                            color: $white;
+                            padding-bottom: 10px;
+                        }
+                    }
+                    p {
+                        @include subtitle {
+                            color: $white;
+                            padding-bottom: 30px;
+                        }
+                    }
+                    button {
+                        @include buttonText;
+                        color: $hotRed;
+                        background-color: transparent;
+                        border: 2px solid $hotRed;
+                        border-radius: 4px;
+                        padding: 4px 16px;
+                        font-size: 16px;
+                        font-weight: 500;
+                        @extend %transition;
+                        &:hover {
+                            color: $white;
+                            background-color: $hotRed;
+                        }
+                    }
+                }
+            }
+           
+        }
+    }
+    @media only screen and (max-width: 991px) {
+        padding: 80px 0;
+        margin: 0;
+        .topbutton {
+            display: block;
+            margin-top: 30px;
+        }
+        .allNews {
+            padding-top: 20px;
+            .news {
+                padding: 40px 12px 0;
+                .newsContent {
+                    padding: 20px;
+                }
+            }
+        }
+    }
+}
