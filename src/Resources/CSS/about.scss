@@ -1,0 +1,82 @@
+@import './global.scss';
+
+.findYourWork {
+    overflow: hidden;
+    background-color: $darkGray;
+    padding: 340px 0;
+    margin-bottom: -100px;
+
+    .row {
+        position: relative;
+
+        img {
+            position: absolute;
+            width: 90vw;
+            height: 705px;
+            object-fit: cover;
+            border-radius: 10px 0 0 10px;
+            top: -120px;
+            left: 60px;
+            z-index: 0;
+        }
+
+        .contentContainer {
+            max-width: 800px;
+            padding: 120px 100px;
+            border-radius: 10px;
+            background-color: $darkShadow;
+            position: relative;
+            z-index: 9;
+
+            h4 {
+                @include h4 {
+                    color: $white;
+                    padding-bottom: 20px;
+                }
+            }
+
+            p {
+                @include paragraphFont {
+                    color: $white;
+                    padding-bottom: 60px;
+                }
+            }
+
+            button {
+                @include buttonText;
+                padding: 8px 22px;
+                border-radius: 10px;
+                border: 2px solid $white;
+                background-color: transparent;
+                color: $white;
+                @extend %transition;
+
+                &:hover {
+                    background-color: $hotRed;
+                    border-color: $hotRed;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 991px) {
+        padding: 100px 0;
+        margin-bottom: 0;
+        .row {
+            img {
+                height: 350px;
+                top:-35px;
+                left: 40px;
+            }
+            .contentContainer {
+                padding: 50px 40px;
+                h4 {
+                    padding-bottom: 10px
+                }
+                p {
+                    padding-bottom: 30px;
+                }
+            }
+        }
+    }
+
+}

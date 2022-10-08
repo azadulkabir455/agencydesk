@@ -132,19 +132,19 @@ h1, h2, h3, h4,p {
 
 @mixin buttonText {
     font-family: $poppins;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 28px;
-    font-weight: 800;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.25px;
     @content;
     @media only screen and (max-width: 1024px) {
-        font-size: 18px;
-        line-height: 26px;
-    }
-    @media only screen and (max-width: 767px) {
         font-size: 16px;
         line-height: 24px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 14px;
+        line-height: 20px;
         letter-spacing: .25px;
     }
 }

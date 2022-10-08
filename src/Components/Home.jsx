@@ -4,35 +4,15 @@ import { agencyDeskImages } from "../Resources/Images/Image";
 import "../Resources/CSS/home.scss";
 import SingleService from '../GlobalsWidgets/Services/SingleService';
 import { BusinessStrategy, WebsiteDevelopment, Marketing, MobileApp } from '../Resources/Icons/CustomIcons';
+import AboutUs from '../GlobalsWidgets/GlobalSection/AboutUs';
+import OurFunFact from '../GlobalsWidgets/GlobalSection/OurFunFact';
 
 
 export default function Home() {
   return (
     <>
       <LandingPageBanner />
-      <div className="aboutUs">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-5 col-12">
-              <img src={agencyDeskImages.aboutUs} alt="" />
-            </div>
-            <div className="col-lg-7 col-12 leftContent">
-              <h2>About</h2>
-              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>
-              <div className="row innerContent">
-                <div className="col-md-6 col-12">
-                  <h4>Who we are</h4>
-                  <p>There are many vtions of passages of Lorem Ipsum available, but the majority have suffered.</p>
-                </div>
-                <div className="col-md-6 col-12">
-                  <h4>Who we are</h4>
-                  <p>There are many vtions of passages of Lorem Ipsum available, but the majority have suffered.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <AboutUs img={agencyDeskImages.aboutUs}/>
       <div className="ourServices">
         <div className="container">
           <div className="row">
@@ -80,31 +60,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="funFact">
-        <div className="container">
-          <h4>Our Fun Facts</h4>
-          <div className="row">
-            <div className="col-12 col-lg-4 counter">
-              <div className="number">
-                199+
-              </div>
-              <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.</p>
-            </div>
-            <div className="col-12 col-lg-4 counter">
-              <div className="number">
-                40+
-              </div>
-              <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.</p>
-            </div>
-            <div className="col-12 col-lg-4 counter">
-              <div className="number">
-                510+
-              </div>
-              <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <OurFunFact />
       <div className="latestNews">
         <div className="container">
           <div className="row">
