@@ -33,10 +33,39 @@ const MobileApp = () => {
   )
 }
 
+const Email = () => {
+  return (
+    <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+      <polyline points="22,6 12,13 2,6"></polyline>
+    </svg>
+  )
+}
+
+const Headphone = () => {
+  return (
+    <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+      <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+    </svg>
+  )
+}
+const Location = () => {
+  return (
+    <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+      <circle cx="12" cy="10" r="3"></circle>
+    </svg>
+  )
+}
+
 export {
   BusinessStrategy,
   WebsiteDevelopment,
   Marketing,
-  MobileApp
+  MobileApp,
+  Email,
+  Headphone,
+  Location
 }
 

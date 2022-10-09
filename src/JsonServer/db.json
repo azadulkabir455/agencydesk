@@ -20,5 +20,23 @@
       "newsletter": "hiddenperson200@gmail.com",
       "id": 5
     }
+  ],
+  "contact": [
+    {
+      "id": 1,
+      "name": "Azad Ul Kabir",
+      "email": "azad@gmail.com",
+      "phone": "017043370",
+      "subject": "Web Designer",
+      "message": "Rapidiously orchestrate accurate services and leading-edge schemas. Appropriately harness 24/365 benefits via parallel information. Collaboratively."
+    },
+    {
+      "name": "Saddam Hoissain",
+      "email": "saddam@gmail.com",
+      "phone": "018928374635",
+      "subject": "Islami Jihad",
+      "message": "Competently re-engineer diverse testing procedures with distributed benefits. Seamlessly scale revolutionary intellectual capital vis-a-vis premier.",
+      "id": 2
+    }
   ]
 }
