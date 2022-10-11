@@ -9,7 +9,8 @@ const agencyDeskImages = {
     blog3: require("./blog3.jpg"),
     aboutUsGirl: require("./aboutUsGirl.jpg"),
     findingUs: require("./findingUs.png"),
-    contactUs: require("./contactus.jpg")
+    contactUs: require("./contactus.jpg"),
+    world: require("./world.png")
 }
 
 export {agencyDeskImages}

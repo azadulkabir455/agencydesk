@@ -39,6 +39,23 @@
 .myNav .nav-link:hover::before {
     width: 50%;
 }
+.myNav button {
+    @include menuFont {
+        color: $white;
+        font-weight: 400;
+
+    }
+    background-color: transparent;
+    border: 1px solid $cutePink;
+    padding: 4px 12px;
+    border-radius: 4px;
+    position: relative;
+    top: -6px;
+    @extend %transition;
+    &:hover {
+      background-color: $cutePink;      
+    }
+}
 
 // For Tab and Mobile
 
