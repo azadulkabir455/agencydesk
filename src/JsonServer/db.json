@@ -11,14 +11,6 @@
     {
       "newsletter": "azadulkabir10@gmail.com",
       "id": 3
-    },
-    {
-      "newsletter": "fatema@gmail.com",
-      "id": 4
-    },
-    {
-      "newsletter": "hiddenperson200@gmail.com",
-      "id": 5
     }
   ],
   "contact": [
@@ -37,6 +29,14 @@
       "subject": "Islami Jihad",
       "message": "Competently re-engineer diverse testing procedures with distributed benefits. Seamlessly scale revolutionary intellectual capital vis-a-vis premier.",
       "id": 2
+    },
+    {
+      "name": "Saima Islam",
+      "email": "saima@gmail.com",
+      "phone": "01702589631",
+      "subject": "Student",
+      "message": "Distinctively simplify distributed process improvements whereas intuitive materials. Authoritatively foster cross-media internal or \"organic\" sources.",
+      "id": 3
     }
   ]
 }

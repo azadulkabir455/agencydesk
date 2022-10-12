@@ -9,6 +9,8 @@ const GlobalDataContainer = (props) => {
 
     const [user, setUser] = useState([])
 
+
+    // Authentication
     const signup = (email, password) => {
         createUserWithEmailAndPassword(auth, email, password)
         .then(() => {
@@ -55,7 +57,7 @@ const GlobalDataContainer = (props) => {
         }
     },[])
     return (
-        <GlobalContext.Provider value={{user, signup, login, signout, resetpass }}>
+        <GlobalContext.Provider value={{user, signup, login, signout, resetpass}}>
             {props.children}
         </GlobalContext.Provider>
     )
