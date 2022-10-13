@@ -1,42 +1,18 @@
 {
   "newsletter": [
     {
-      "id": 1,
-      "newsletter": "some@gmail.com"
-    },
-    {
-      "id": 2,
-      "newsletter": "azad@gmail.com"
-    },
-    {
-      "newsletter": "azadulkabir10@gmail.com",
-      "id": 3
+      "newsletter": "azad@gmail.com",
+      "id": 1
     }
   ],
   "contact": [
     {
-      "id": 1,
-      "name": "Azad Ul Kabir",
-      "email": "azad@gmail.com",
-      "phone": "017043370",
-      "subject": "Web Designer",
-      "message": "Rapidiously orchestrate accurate services and leading-edge schemas. Appropriately harness 24/365 benefits via parallel information. Collaboratively."
-    },
-    {
-      "name": "Saddam Hoissain",
-      "email": "saddam@gmail.com",
-      "phone": "018928374635",
-      "subject": "Islami Jihad",
-      "message": "Competently re-engineer diverse testing procedures with distributed benefits. Seamlessly scale revolutionary intellectual capital vis-a-vis premier.",
-      "id": 2
-    },
-    {
-      "name": "Saima Islam",
-      "email": "saima@gmail.com",
-      "phone": "01702589631",
-      "subject": "Student",
-      "message": "Distinctively simplify distributed process improvements whereas intuitive materials. Authoritatively foster cross-media internal or \"organic\" sources.",
-      "id": 3
+      "name": "Azad Ul Kabir Akash",
+      "email": "akash@gmail.com",
+      "phone": "01904337027",
+      "subject": "Web designe",
+      "message": "Aroactively engineer orthogonal action items through end-to-end core competencies. Credibly incubate reliable sources before bricks-and-clicks.",
+      "id": 1
     }
   ]
 }
