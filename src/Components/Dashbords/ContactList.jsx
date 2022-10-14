@@ -1,6 +1,10 @@
 import React,{useState} from 'react';
 import useFetch from '../../CustomHooks/useFetch';
+import "../../Resources/CSS/Dashbord/dashbord.scss"
 
+const trimText = (value) => {
+  return (value.slice(0, 160) + " ....");
+}
 export default function ContactList() {
   const [inputs, setInputs] = useState({});
   const [message, setMessage] = useState("Write your message")
@@ -49,19 +53,19 @@ export default function ContactList() {
         <div className="container-fluide">
           {
             data.map((item) =>
-              <div className="row" key={item.id}>
-                <div className="col-12 col-lg-7">
+              <div className="row contact" key={item.id}>
+                <div className="col-12 col-lg-9">
                   <h4>{item.name}</h4>
-                  <div className="contact-info">
-                    <p>{item.email}</p>
-                    <p>{item.phone}</p>
+                  <div className="contactInfos">
+                    <p>Email : {item.email}</p>
+                    <p>Phone : {item.phone}</p>
                   </div>
                   <h2>{item.subject}</h2>
-                  <p>{item.message}</p>
+                  <p>{trimText(item.message)}</p>
                 </div>
-                <div className="col-12 col-lg-5">
-                  <button data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => {selectContactInfo(item.id)}}>Edit</button>
-                  <button onClick={() => deleteContactInfo(item.id)}>Delete</button>
+                <div className="col-12 col-lg-3 btnGroup">
+                  <button data-bs-toggle="modal" className='editButton' data-bs-target="#exampleModal" onClick={() => {selectContactInfo(item.id)}}>Edit</button>
+                  <button onClick={() => deleteContactInfo(item.id)} className="deleteButton">Delete</button>
                 </div>
               </div>
             )
@@ -73,7 +77,7 @@ export default function ContactList() {
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h4>Modal title</h4>
+                            <h4>Edit Contact Info </h4>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
@@ -98,4 +102,8 @@ export default function ContactList() {
             </div>
     </>
   )
+}
+
+export {
+  trimText
 }

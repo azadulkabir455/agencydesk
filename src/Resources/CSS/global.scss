@@ -202,3 +202,51 @@ h1, h2, h3, h4,p {
     }
 }
 
+.adminPanel {
+    position: fixed;
+    right:0;
+    top: 50%;
+    z-index: 99;
+    .link {
+        background-color: $cutePink;
+        position: inherit;
+        right: -123px;
+        overflow: hidden;
+        @extend %transition;
+        &:hover {
+            right: 0;
+        }
+        svg{
+            font-size: 22px;
+            color:$white;
+            height: 30px;
+            width: 30px;
+            padding: 5px;
+            position: relative;
+            bottom:1px;
+            animation: spin 2s linear infinite;
+            
+        }
+        a {
+            @include preHeader {
+                color: $white;
+            }
+            text-decoration: none;
+            padding: 5px;
+            white-space: nowrap;
+            &:hover {
+                color: $darkShadow;
+            }
+        }
+    }   
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+

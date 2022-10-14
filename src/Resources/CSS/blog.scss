@@ -1,0 +1,37 @@
+@import "./global.scss";
+
+.blog {
+    padding: 120px 0 220px;
+    margin-bottom: -100px;
+    background-color: $darkGray;
+    .blogInfo {
+        padding: 20px;
+        background-color: $lightShadow;
+        border-radius: 4px;
+        color: $white;
+        h4 {
+            @include subtitle;
+        }
+        span {
+            @include preHeader {
+                color: $fireYellow;
+                padding-top: 6px;
+            }
+        }
+        p {
+            @include paragraphFont {
+                color: $lightWhite;
+            }
+            padding: 20px 0 30px
+        }
+        button {
+            background-color: transparent;
+            border:none;
+            color: $hotRed;
+            @extend %transition; 
+            &:hover {
+                color: $fireYellow;
+            }
+        }
+    }
+}

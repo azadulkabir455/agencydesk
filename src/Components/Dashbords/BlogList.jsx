@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useFetch from '../../CustomHooks/useFetch';
+import { trimText } from './ContactList';
 
 export default function BlogList() {
   const [data] = useFetch("http://localhost:3001/blog")
@@ -9,7 +10,7 @@ export default function BlogList() {
   const [blogId, setBlogId] = useState();
   const [buttonChange, setButtonChange] = useState(false)
 
-  const blogInfo = {...inputs, blog};
+  const blogInfo = { ...inputs, blog };
   console.log(inputs)
 
   const fromHandle = (e) => {
@@ -19,29 +20,29 @@ export default function BlogList() {
   const inputHandle = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    setInputs((values) => ({...values,[name]:value}))
+    setInputs((values) => ({ ...values, [name]: value }))
   }
   const blogHandle = (e) => {
     setBlog(e.target.value);
   }
   const createBlog = () => {
     let item = blogInfo;
-    fetch("http://localhost:3001/blog",{
-      method:"POST",
+    fetch("http://localhost:3001/blog", {
+      method: "POST",
       headers: {
-        "Accept":"application/jason",
-        "Content-type":"application/json"
+        "Accept": "application/jason",
+        "Content-type": "application/json"
       },
-      body:JSON.stringify(item)
+      body: JSON.stringify(item)
     }).then((response) => {
       response.json().then((data) => {
       })
     })
   }
   const deleteBlog = (id) => {
-    fetch(`http://localhost:3001/blog/${id}`,{
-      method:"DELETE",
-    }).then((respose)=> {
+    fetch(`http://localhost:3001/blog/${id}`, {
+      method: "DELETE",
+    }).then((respose) => {
       respose.json().then((data) => {
 
       })
@@ -49,7 +50,7 @@ export default function BlogList() {
   }
   const selectBlog = (id) => {
     let item = data[id - 1];
-    setInputs({name:item.name, type:item.type});
+    setInputs({ name: item.name, type: item.type });
     setBlog(item.blog)
     setBlogId(item.id)
 
@@ -58,14 +59,14 @@ export default function BlogList() {
   const updateBlog = () => {
     let item = blogInfo;
     fetch(`http://localhost:3001/blog/${blogId}`, {
-      method:"PUT",
+      method: "PUT",
       headers: {
-        "Accept":"application/json",
-        "Content-type":"application/json"
+        "Accept": "application/json",
+        "Content-type": "application/json"
       },
-      body:JSON.stringify(item)
+      body: JSON.stringify(item)
     }).then((response) => {
-      response.json().then((data) => {})
+      response.json().then((data) => { })
     })
   }
   const buttonToggle = (value) => {
@@ -78,24 +79,24 @@ export default function BlogList() {
         <div className="container-flude">
           <div className="addBlog">
             <button data-bs-toggle="modal" data-bs-target="#addBlog" onClick={() => buttonToggle(true)}>Add Blog</button>
-              {
-                data.map((item) => 
-                  <>
-                  <div className="row">
-                    <div className="col-12 col-lg-7">
-                    <h4>{item.name}</h4>
-                  <span>{item.type}</span>
-                  <p>{item.blog}</p>
-                    </div>
-                    <div className="col-12 col-lg-5">
-                      <button onClick={() => [selectBlog(item.id),buttonToggle(false)] } data-bs-toggle="modal" data-bs-target="#addBlog">Edit</button>
-                      <button onClick={() => deleteBlog(item.id)}>Delete</button>
-                    </div>
-                  </div>
-                  </>
-                )
-              }
           </div>
+          {
+            data.map((item) =>
+              <>
+                <div className="row blog">
+                  <div className="col-12 col-lg-9">
+                    <h4>{item.name}</h4>
+                    <span>{item.type}</span>
+                    <p>{trimText(item.blog)}</p>
+                  </div>
+                  <div className="col-12 col-lg-3 btnGroup">
+                    <button className='editButton' onClick={() => [selectBlog(item.id), buttonToggle(false)]} data-bs-toggle="modal" data-bs-target="#addBlog">Edit</button>
+                    <button className='deleteButton' onClick={() => deleteBlog(item.id)}>Delete</button>
+                  </div>
+                </div>
+              </>
+            )
+          }
         </div>
       </div>
 
@@ -103,13 +104,13 @@ export default function BlogList() {
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h1 className="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <h1 className="modal-title fs-5" id="exampleModalLabel">Blog</h1>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
               <form action="#" onSubmit={fromHandle}>
                 <label htmlFor="name">Name:</label>
-                <input type="text" id="name" name="name" value={inputs.name} placeholder='write your name' onChange={inputHandle}/>
+                <input type="text" id="name" name="name" value={inputs.name} placeholder='write your name' onChange={inputHandle} />
                 <label htmlFor="type">Type:</label>
                 <select name="type" id="type" onChange={inputHandle}>Blog Type:
                   <option value="Creative Blog">Creative Blog</option>
@@ -122,9 +123,9 @@ export default function BlogList() {
             </div>
             <div className="modal-footer">
               {
-                buttonChange?
-                <button type="button"  data-bs-dismiss="modal" onClick={createBlog}>Create Blog</button>:
-                <button type="button"  data-bs-dismiss="modal" onClick={() => {updateBlog()}}>Update Blog</button>
+                buttonChange ?
+                  <button type="button" data-bs-dismiss="modal" onClick={createBlog}>Create Blog</button> :
+                  <button type="button" data-bs-dismiss="modal" onClick={() => { updateBlog() }}>Update Blog</button>
               }
             </div>
           </div>

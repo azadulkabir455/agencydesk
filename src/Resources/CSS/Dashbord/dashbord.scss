@@ -11,14 +11,16 @@ body {
     margin-bottom: -100px;
     position: relative;
     color: $white;
+
     .sidebar {
         width: 250px;
         height: 100%;
         position: absolute;
-        top:0;
-        left:0;
+        top: 0;
+        left: 0;
         background-color: $darkShadow;
         padding: 60px 40px;
+
         .backHome {
             a {
                 display: flex;
@@ -26,13 +28,16 @@ body {
                 text-decoration: none;
                 @extend %transition;
                 position: relative;
+
                 @include menuFont {
                     color: $white;
                     font-weight: 500;
                 }
+
                 span {
                     margin-left: 30px;
                 }
+
                 svg {
                     font-size: 22px;
                     margin-right: 4px;
@@ -40,29 +45,37 @@ body {
                     animation-fill-mode: forwards;
                     position: absolute;
                 }
+
                 &:hover {
                     color: $hotRed;
                 }
             }
         }
+
         .dashbordLink {
             margin: 40px 0;
+
             ul {
                 list-style-type: none;
-                padding:0;
+                padding: 0;
+
                 li {
                     margin-bottom: 10px;
+
                     a {
                         text-decoration: none;
                         color: $white;
                         @extend %transition;
+
                         @include menuFont {
                             font-weight: 500;
                             font-size: 14px;
                         }
+
                         svg {
                             margin-right: 6px;
                         }
+
                         &:hover {
                             color: $hotRed;
                         }
@@ -71,15 +84,18 @@ body {
             }
         }
     }
+
     .mainContent {
         margin-left: 250px;
         min-height: 600px;
     }
+
     @media only screen and (max-width: 991px) {
         .sidebar {
             width: 150px;
             padding: 40px 20px;
         }
+
         .mainContent {
             margin-left: 150px;
         }
@@ -88,11 +104,235 @@ body {
 
 @keyframes iconAnimation {
     from {
-        left:10px;
+        left: 10px;
         opacity: 1;
     }
+
     to {
         left: 0px;
         opacity: 0;
+    }
+}
+
+.dashbordSummery {
+    padding: 60px;
+    .summery {
+        padding: 30px;
+        border: 1px solid $hotRed;
+        border-radius: 4;
+        text-align: center;
+        h4 {
+            @include h4;
+        }
+        p {
+            @include subtitle {
+                color: $hotRed;
+            }
+            margin-top: 30px;
+        }
+    }
+}
+
+.newsLetter {
+    padding: 60px;
+
+    .email {
+        border-bottom: 1px solid $white;
+        border-top: 1px solid $white;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 15px;
+        p {
+            @include paragraphFont {
+                text-transform: lowercase;
+            }
+        }
+    }
+}
+.contactList {
+    padding: 60px;
+    .contact {
+        border-bottom: 1px solid $white;
+        border-top: 1px solid $white;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 15px;
+        h4 {
+            @include subtitle ;
+        }
+        .contactInfos {
+            display: flex;
+            p {
+                @include preHeader {
+                    margin-right: 15px;
+                    text-transform: none;
+                    color: $fireYellow;
+                }
+            }
+            padding-top: 0;
+        }
+        h2 {
+            @include menuFont ;
+            padding-top: 16px;
+            
+        }
+        p {
+            @include paragraphFont;
+            padding-top: 4px;
+        }
+    }
+}
+
+.bloglist {
+    .addBlog  {
+        margin-bottom: 40px;
+        display: inline-block;
+        button {
+            @include buttonText {
+                font-size: 14px;
+            }
+    
+            padding: 2px 8px;
+            border-radius: 4px;
+            background-color: $hotRed;
+            color: $white;
+            border: 1px solid $hotRed;
+            @extend %transition;
+    
+            &:hover {
+                color: $hotRed;
+                background-color: transparent;
+            }
+        }
+    }
+    padding: 60px;
+    .blog {
+        border-bottom: 1px solid $white;
+        border-top: 1px solid $white;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 15px;
+        h4 {
+            @include subtitle;
+        }
+        span {
+            @include preHeader {
+                color: $fireYellow;
+                padding-top: 6px;
+            }
+        }
+        p {
+            @include paragraphFont ;
+            padding-top: 16px;
+        }
+    }
+}
+
+
+
+
+
+
+
+// Global Css
+.btnGroup {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .editButton,
+    .deleteButton {
+        @include buttonText {
+            background-color: transparent;
+            text-transform: capitalize;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        padding: 4px 12px;
+        margin: 0 5px;
+        border-radius: 4px;
+    }
+
+    .editButton {
+        color: $fireYellow;
+        border: 1px solid $fireYellow;
+        @extend %transition;
+
+        &:hover {
+            color: $white;
+            background-color: $fireYellow;
+        }
+    }
+
+    .deleteButton {
+        color: $hotRed;
+        border: 1px solid $hotRed;
+        @extend %transition;
+
+        &:hover {
+            color: $white;
+            background-color: $hotRed;
+        }
+    }
+}
+
+.modal-content {
+    background-color: $darkGray;
+    border: 1px solid $white;
+    border-radius: 4px;
+    .modal-header {
+        h4 {
+            @include subtitle;
+        }
+        .btn-close {
+            filter: invert(1);
+        }
+    }
+    .modal-body {
+        form {
+            label {
+                display:block;
+                padding-bottom: 6px;
+                @include preHeader {
+                    color: $fireYellow;
+                }
+            }
+            input,textarea,select {
+                width: 100%;
+                margin-bottom: 16px;
+                padding: 6px 10px;
+                background-color: transparent;
+                border: 1px solid $white;
+                border-radius: 4px;
+                color: $white;
+            }
+            textarea {
+                min-height: 130px;
+                resize: vertical;
+            }
+        }
+    }
+    .modal-footer {
+        button {
+            @include buttonText {
+                background-color: transparent;
+                text-transform: capitalize;
+                font-size: 16px;
+                font-weight: 400;
+            }
+    
+            padding: 4px 12px;
+            margin: 0 5px;
+            border-radius: 4px;
+            color: $fireYellow;
+            border: 1px solid $fireYellow;
+            @extend %transition;
+    
+            &:hover {
+                color: $white;
+                background-color: $fireYellow;
+            }
+        }
     }
 }

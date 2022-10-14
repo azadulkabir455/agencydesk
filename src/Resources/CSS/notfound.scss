@@ -1,0 +1,19 @@
+@import "./global.scss";
+
+.notFound {
+    padding: 120px 0 240px;
+    margin-bottom: -100px;
+    background-color: $darkGray;
+    color: $white;
+    text-align: center;
+    h2 {
+        @include h1 {
+            font-size: 120px;
+        }
+    }
+    h4 {
+        @include h4 {
+            color: $hotRed;
+        }
+    }
+}

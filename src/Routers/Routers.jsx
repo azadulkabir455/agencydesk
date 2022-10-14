@@ -12,6 +12,7 @@ import Singin from '../Components/Singin';
 import Singup from '../Components/Singup';
 import ResetPass from '../Components/ResetPass';
 import ProtectedRoutes from "./ProtectedRoutes"
+import NotFound from '../Components/Dashbords/NotFound';
 
 
 export default function Routers() {
@@ -25,6 +26,7 @@ export default function Routers() {
             <Route path ="/login" element={<Singin />} />
             <Route path ="/signup" element={<Singup />} />
             <Route path ="/resetpass" element={<ResetPass />} />
+            <Route path ="*" element={<NotFound />} />
             <Route path="/admin" element={<ProtectedRoutes><Dashbord /></ProtectedRoutes>}>
               <Route path="newsletter" element={<NewsLetterList />}/>
               <Route path="contact" element={<ContactList />}/>
