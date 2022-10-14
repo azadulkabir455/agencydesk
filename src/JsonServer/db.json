@@ -13,6 +13,34 @@
       "subject": "Web designe",
       "message": "Aroactively engineer orthogonal action items through end-to-end core competencies. Credibly incubate reliable sources before bricks-and-clicks.",
       "id": 1
+    },
+    {
+      "name": "Azad Ul Kabir",
+      "email": "azad@gmail.com",
+      "phone": "01704337027",
+      "subject": "Web design",
+      "message": "Interactively benchmark resource maximizing benefits before go forward applications. Efficiently synthesize covalent niches for standards compliant bandwidth. Dynamically predominate low-risk high-yield technologies before wireless results. Dynamically enhance orthogonal \"outside the box\" thinking before effective paradigms. Professionally network parallel users without.",
+      "id": 2
+    }
+  ],
+  "blog": [
+    {
+      "id": 1,
+      "name": "Azad Ul Kabir Akash",
+      "type": "Story tell",
+      "blog": "Energistically initiate viral information with performance based collaboration and idea-sharing. Compellingly promote global portals after quality metrics. Dynamically aggregate high standards in vortals and high standards in metrics. Dynamically extend e-business technology before parallel testing procedures. Professionally impact intuitive opportunities rather than cutting-edge expertise.Monotonectally extend granular networks before economically sound potentialities. Phosfluorescently coordinate efficient."
+    },
+    {
+      "name": "Azad Ul Kabir Akash",
+      "type": "Creative Blog",
+      "blog": "Hey Compellingly benchmark B2C e-business via virtual \"outside the box\" thinking. Assertively leverage existing frictionless partnerships through web-enabled total linkage. Dynamically envisioneer top-line portals via impactful experiences. Interactively restore multidisciplinary experiences through economically sound quality vectors. Competently create cooperative e-tailers after.",
+      "id": 2
+    },
+    {
+      "name": "Fatema Tuz Sultana",
+      "type": "Information",
+      "blog": "Uniquely supply high standards in e-tailers via high-payoff products. Dynamically initiate end-to-end architectures after open-source paradigms. Competently disseminate web-enabled experiences after customized supply chains. Collaboratively deploy economically sound architectures whereas ubiquitous outsourcing. Continually benchmark high-quality outsourcing and functionalized scenarios.\n\nDramatically.",
+      "id": 3
     }
   ]
 }

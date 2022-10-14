@@ -9,7 +9,7 @@ const useFetch = (url) => {
         setData(data);
       })
     })
-  }, [url,data]);
+  }, [url]);
 
   return [data];
 };
