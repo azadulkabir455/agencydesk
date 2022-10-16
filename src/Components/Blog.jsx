@@ -3,6 +3,7 @@ import OtherPageBanner from '../GlobalsWidgets/Banners/OtherPageBanner';
 import useFetch from '../CustomHooks/useFetch';
 import "../Resources/CSS/blog.scss"
 import {trimText} from "../Components/Dashbords/ContactList"
+import {Link} from "react-router-dom"
 
 export default function Blog() {
   const [data] = useFetch("http://localhost:3001/blog");
@@ -20,7 +21,7 @@ export default function Blog() {
                     <h4>{item.name}</h4>
                     <span>{item.type}</span>
                     <p>{trimText(item.blog)}</p>
-                    <button>Read more</button>
+                    <Link to={`/blog/${item.id}`}>Read More</Link>
                     </div>
                   </div>
 
